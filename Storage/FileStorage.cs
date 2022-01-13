@@ -32,11 +32,11 @@ public class FileStorage : MemCache, IStorage<Flat>
 
                try
                {
-                   var deserialized = JsonConvert.DeserializeObject<List<LabData>>(allLines);
+                   var deserialized = JsonConvert.DeserializeObject<List<Flat>>(allLines);
 
                    if (deserialized != null)
                    {
-                       foreach (var labData in deserialized)
+                       foreach (var Flat in deserialized)
                        {
                            base[labData.Id] = labData;
                        }

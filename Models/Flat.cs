@@ -1,8 +1,10 @@
+using System;
 namespace lab1.Models
 
 {
     public class Flat
     {
+        public Guid Id {get; set;}
         public string Address { get; set; }
         public int Area { get; set; }
         public int NumberOfRooms { get; set; }

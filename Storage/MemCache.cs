@@ -15,14 +15,14 @@ namespace lab1.Storage
             {
                 lock (_sync)
                 {
-                    if (!Has(id)) throw new IncorrectFlatException($"No LabData with id {id}");
+                    if (!Has(id)) throw new IncorrectFlatException($"No Flat with id {id}");
 
                     return _memCache.Single(x => x.Id == id);
                 }
             }
             set
             {
-                if (id == Guid.Empty) throw new IncorrectFlatException("Cannot request LabData with an empty id");
+                if (id == Guid.Empty) throw new IncorrectFlatException("Cannot request Flat with an empty id");
 
                 lock (_sync)
                 {
