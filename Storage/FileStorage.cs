@@ -38,7 +38,7 @@ public class FileStorage : MemCache, IStorage<Flat>
                    {
                        foreach (var Flat in deserialized)
                        {
-                           base[labData.Id] = labData;
+                           base[Flat.Id] = Flat;
                        }
                    }
                }
